@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TwitterService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">services</a> &gt; <span class="el_source">TwitterService.java</span></div><h1>TwitterService.java</h1><pre class="source lang-java linenums">package services;
+
+import java.util.concurrent.CompletableFuture;
+
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import implementations.Location;
+import implementations.SearchTweetsImpl;
+import implementations.TweetDistictWordImpl;
+import implementations.TweetEmotionImpl;
+import implementations.UserProfileImpl;
+import modals.Twitter4jFakeHappy;
+import modals.Twitter4jFakeNeutral;
+import modals.Twitter4jFakeSad;
+import play.libs.Json;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
+
+<span class="nc" id="L22">public class TwitterService {</span>
+
+<span class="fc" id="L24">	public static boolean isTesting = false;</span>
+<span class="fc" id="L25">	public static String typeOfFake = &quot;&quot;;</span>
+	public static TwitterFactory getTwitterFactoryInstance() {
+<span class="fc" id="L27">		ConfigurationBuilder conf = new ConfigurationBuilder();</span>
+<span class="fc" id="L28">		conf.setDebugEnabled(true)</span>
+<span class="fc" id="L29">				.setOAuthConsumerKey(&quot;uvZYPifCuMDmDLhGzryVaH9sA&quot;)</span>
+<span class="fc" id="L30">				.setOAuthConsumerSecret(&quot;G01gHXhUerHAevCjhR0U1iOlm5VNmxC5cGRnldvHscVFcMfkvQ&quot;)</span>
+<span class="fc" id="L31">				.setOAuthAccessToken(&quot;969353476450017280-r7gPo5QAT8svSDiCBoB0jSKu1f3Oa8P&quot;)</span>
+<span class="fc" id="L32">				.setOAuthAccessTokenSecret(&quot;TmapsealCXor82pige4FwRZ16tqKollMbBb6AieVcKVrJ&quot;);</span>
+<span class="fc" id="L33">		return new TwitterFactory(conf.build());</span>
+	
+	}
+	
+	public static Twitter getTwitterInstance(TwitterFactory factory) {
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">		if(!isTesting) {</span>
+<span class="nc" id="L39">			return factory.getInstance();</span>
+		}
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">		if(isTesting) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">			if(&quot;HAPPY&quot;.equalsIgnoreCase(typeOfFake)){</span>
+<span class="fc" id="L43">				return new Twitter4jFakeHappy();</span>
+			}
+<span class="fc bfc" id="L45" title="All 2 branches covered.">			if(&quot;SAD&quot;.equalsIgnoreCase(typeOfFake)){</span>
+<span class="fc" id="L46">				return new Twitter4jFakeSad();</span>
+			}
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">			if(&quot;NEUTRAL&quot;.equalsIgnoreCase(typeOfFake)){</span>
+<span class="fc" id="L49">				return new Twitter4jFakeNeutral();</span>
+			}
+		}
+<span class="nc" id="L52">		return factory.getInstance();</span>
+	}
+	public static CompletableFuture&lt;ArrayNode&gt; getTweets(String searchKey,int count) throws TwitterException {
+<span class="nc" id="L55">		return CompletableFuture.supplyAsync(()-&gt;new SearchTweetsImpl().getTweetsAsync(searchKey, count))</span>
+<span class="nc" id="L56">				.thenCombine(CompletableFuture.supplyAsync(()-&gt;new TweetEmotionImpl().getTweetEmotion(searchKey, count)), </span>
+						(a, b)-&gt;{
+							ObjectNode node = Json.newObject();
+							node.put(&quot;tweetEmotion&quot;, b);
+							a.add(node);
+							return a;
+						});
+	}
+	
+	public static CompletableFuture&lt;ArrayNode&gt; getHashTagTweets(String searchKey,int count) throws TwitterException {
+<span class="nc" id="L66">		return CompletableFuture.supplyAsync(()-&gt;new SearchTweetsImpl().getTweetsAsync(searchKey, count));</span>
+	}
+	
+	public static CompletableFuture&lt;ArrayNode&gt; getTweetsByLocation(double latitude, double longitude, int count) throws TwitterException {
+<span class="nc" id="L70">		return CompletableFuture.supplyAsync(()-&gt;new Location().getTweetsByLocationAsync(latitude, longitude, count));</span>
+	}
+	
+	public static CompletableFuture&lt;ArrayNode&gt; getUserProfile(String searchKey,int count) throws TwitterException {
+<span class="nc" id="L74">		return CompletableFuture.supplyAsync(()-&gt;new UserProfileImpl().getUserProfile(searchKey, count));</span>
+	}
+	
+	public static CompletableFuture&lt;ArrayNode&gt; getTweetDistinctWordCount(String searchKey,int count) throws TwitterException {
+<span class="nc" id="L78">		return CompletableFuture.supplyAsync(()-&gt;new TweetDistictWordImpl().getTweetDistinctWordCount(searchKey, count));</span>
+	}
+	
+	public static CompletableFuture&lt;ArrayNode&gt; getTweetEmotion(String searchKey,int count) throws TwitterException {
+		//return CompletableFuture.supplyAsync(()-&gt;new TweetEmotionImpl().getTweetEmotion(searchKey, count));
+<span class="nc" id="L83">		return null;</span>
+	}
+}
+
+
+
+
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

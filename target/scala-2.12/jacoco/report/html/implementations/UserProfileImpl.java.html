@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserProfileImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">implementations</a> &gt; <span class="el_source">UserProfileImpl.java</span></div><h1>UserProfileImpl.java</h1><pre class="source lang-java linenums">package implementations;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import interfaces.UserProfile;
+import play.libs.Json;
+import services.TwitterService;
+import twitter4j.Paging;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.User;
+
+<span class="nc" id="L18">public class UserProfileImpl implements UserProfile {</span>
+
+	@Override
+	public ArrayNode getUserProfile(String searchKey, int count) {
+<span class="nc" id="L22">		Twitter twitter = TwitterService.getTwitterInstance(TwitterService.getTwitterFactoryInstance());</span>
+<span class="nc" id="L23">		List&lt;Status&gt; timelineTweets = new ArrayList&lt;Status&gt;();</span>
+<span class="nc" id="L24">		ArrayNode userProfile = Json.newArray();</span>
+		try {
+<span class="nc" id="L26">			User user = twitter.showUser(searchKey);</span>
+<span class="nc" id="L27">			Paging paging = new Paging();</span>
+<span class="nc" id="L28">			paging.setCount(count);</span>
+<span class="nc" id="L29">			timelineTweets = twitter.getUserTimeline(user.getId(),paging);</span>
+<span class="nc" id="L30">			StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="nc" id="L31">			timelineTweets.forEach(t-&gt;{</span>
+				System.out.println(t.getText());
+				stringBuilder.append(t.getText() + &quot;&lt;br&gt;&quot;);
+			});
+<span class="nc" id="L35">			String timeLineTweetsString = stringBuilder.toString();</span>
+<span class="nc" id="L36">			ArrayNode timeLineNode = Json.newArray();</span>
+<span class="nc" id="L37">			ObjectNode node = Json.newObject();</span>
+<span class="nc" id="L38">			node.put(&quot;userName&quot;, user.getName());</span>
+<span class="nc" id="L39">			node.put(&quot;userId&quot;, user.getId());</span>
+<span class="nc" id="L40">			node.put(&quot;userScreenName&quot;,user.getScreenName());</span>
+<span class="nc" id="L41">			node.put(&quot;userLocation&quot;,user.getLocation());</span>
+<span class="nc" id="L42">			node.put(&quot;userDescription&quot;, user.getDescription());</span>
+<span class="nc" id="L43">			node.put(&quot;userFollowerCount&quot;, user.getFollowersCount());</span>
+<span class="nc" id="L44">			node.put(&quot;userProfileURL&quot;, user.getURL());</span>
+<span class="nc" id="L45">			node.put(&quot;userImageURL&quot;, user.getBiggerProfileImageURLHttps());</span>
+<span class="nc" id="L46">			node.put(&quot;userIsProtected&quot;, user.isProtected());</span>
+<span class="nc" id="L47">			node.put(&quot;userTimeLineTweets&quot;, timeLineTweetsString);</span>
+<span class="nc" id="L48">			userProfile.add(node);</span>
+<span class="nc" id="L49">		} catch (TwitterException e) {</span>
+			// TODO Auto-generated catch block
+<span class="nc" id="L51">			e.printStackTrace();</span>
+<span class="nc" id="L52">		}</span>
+<span class="nc" id="L53">		return userProfile;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/app/implementations/TweetDistictWordImpl.java:56:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method collect(java.util.stream.Collector<java.lang.Object,capture#1 of ?,java.util.Map<java.lang.Object,java.lang.Integer>>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: interface java.util.List<java.lang.String>[0m
+[0m[[0m[31merror[0m] [0m[0m												.collect(toMap(w -> w.toLowerCase(), w -> 1, Integer::sum));[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/app/implementations/TweetDistictWordImpl.java:56:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method toLowerCase()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable w of type java.lang.Object[0m
+[0m[[0m[31merror[0m] [0m[0m												.collect(toMap(w -> w.toLowerCase(), w -> 1, Integer::sum));[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/app/implementations/TweetDistictWordImpl.java:58:1: variable wordCounter is already defined in method getTweetDistinctWordCount(java.lang.String,int)[0m
+[0m[[0m[31merror[0m] [0m[0m        Map <String, Integer > wordCounter = distinctWords.stream()[0m

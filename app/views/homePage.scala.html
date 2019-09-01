@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+ 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	    <meta http-equiv="Content-Security-Policy" content="default-src *;img-src *;">
+		<title>Tweets Application</title>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/lib/angular.min.js")"></script>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/lib/angular-ui-bootstrap-modal.js")"></script>
+		<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+		<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/common-style.css")">
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/lib/jquery-3.3.1.min.js")"></script>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/lib/bootstrap.min.js")"></script>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/search/searchApp.js")"></script>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/search/searchController.js")"></script>
+		<script type="text/javascript" src="@routes.Assets.versioned("javascripts/search/searchService.js")"></script>
+
+	</head>
+	<body ng-app="searchTweets" >
+		<div ng-controller="SearchController">
+			<div class="container head-not-move">
+				<div class="row">
+					<div class="col-sm-12"><br></br></div>
+			        <div class="col-sm-12">
+			    		<h2 class="heading-center">Search Tweets</h2>
+			            <div id="custom-search-input">
+			                <div class="input-group col-sm-12">
+			                    <input type="text" class="form-control input-lg" placeholder="enter search key" ng-model="searchKey" />
+			                    <span class="input-group-btn">
+			                        <button class="btn btn-info btn-lg" type="button" ng-click="searchTweets()">
+			                        	<span>Search</span>
+			                        </button>
+			                    </span>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+			<div class="container body-move">
+				<div ng-repeat="(key,results) in allResults">
+				<div class="searchHeading">
+					<br></br>
+					<caption>
+						<a href="#" ng-click="$event.preventDefault(); openTweetWord(key)">{{key}}</a>&nbsp;
+						<button ng-if="!results.showEmotion" class="btn btn-info btn-sm" ng-click="getTweetSentiment(key)" title="Get Emotion">Get Emotion</button>
+						<span >{{results.emotion}}</span>
+					</caption>
+				</div>
+				<table class="table table-stripped table-color">
+					<thead>
+						<tr>
+							<th column="sr-column">S.No.</th>
+							<th column="name-column">Name</th>
+							<th column="location-column">Location</th>
+							<th column="tweets-column">Tweet</th>
+							<th column="hashtags-column">Hash Tags</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat = "result in results.result">
+							<td>{{$index+1}}</td>
+							<td><a href="#" ng-click="$event.preventDefault(); openProfile(result.displayName)">{{result.name}}</a></td>
+							<td>
+								<div ng-if="result.showLocationLink">
+									<a href="#" ng-click="$event.preventDefault(); openLocation(result.latitude,result.longitude,location)">{{result.location}}</a>
+								</div>
+								<div ng-if="!result.showLocationLink">
+									<a class="linkDisabled" href="#" ng-click="$event.preventDefault(); openLocation(result.latitude,result.longitude,location)">{{result.location}}</a>
+								</div>
+							</td>
+							<td>{{result.tweet}}</td>
+							<td>
+								<span ng-repeat="hashT in result.splitHashTags"><a href="#" ng-click="$event.preventDefault(); openHashTag(hashT)">{{hashT}}</a>&nbsp;&nbsp;&nbsp;</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			
+			 <div class="modal-color" modal="showUserProfileModal" close="cancel("USER_PROFILE")">
+			      <div class="modal-header">
+			          <h4>Profile For {{userProfileQueryParam}}</h4>
+			      </div>
+			      <div class="modal-body">
+			          <div class="user-profile">
+			          	<p> Name: {{userProfileQueryResult.userName}}</p><br>
+			          	<img id="imgID" class="img-center" ng-src="{{userProfileQueryResult.userImageURL}}">
+			          	<p> Display Name: {{userProfileQueryResult.userScreenName}}<p><br>
+			          	<p> Location: {{userProfileQueryResult.userLocation}}<p><br>
+			          	<p> Description: {{userProfileQueryResult.userDescription}}<p><br>
+			          	<p> Follower Count: {{userProfileQueryResult.userFollowerCount}}<p><br>
+			          	<p> Profile URL: {{userProfileQueryResult.userProfileURL}}<p><br>
+			          	<div ng-repeat="tweetTimeLine in userProfileQueryResult.splitTimelineTweets">
+			          		<p>{{tweetTimeLine}}</p>
+			          	</div>
+			          </div>
+			      </div>
+			      <div class="modal-footer">
+			        <button class="btn" ng-click="close(userProfileConstant)">Cancel</button>
+			      </div>
+		    </div>
+		    
+		    <div class="modal-color" modal="showLocationModal" close="cancel("LOCATION")">
+			      <div class="modal-header">
+			          <h4>Top 10 Tweets For Location{{locationQueryParam.location}}</h4>
+			      </div>
+			      <div class="modal-body">
+			          <div ng-repeat="result in locationQueryResult">
+			          	<p>{{$index+1}}. {{result.tweet}}</p>
+			          </div>
+			      </div>
+			      <div class="modal-footer">
+			        <button class="btn" ng-click="close(locationConstant)">Cancel</button>
+			      </div>
+		    </div>
+		    
+		    <div class="modal-color" modal="showTweetWordModal" close="close(TWEET_WORD)">
+			      <div class="modal-header">
+			          <h4>Distict Word Count For {{tweetWordQueryParam}}</h4>
+			      </div>
+			      <div class="modal-body">
+			      	<table class="table table-stripped table-color">
+						<thead>
+							<tr>
+								<th column="word-column">Word</th>
+								<th column="word-column">Count</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat = "result in tweetWordQueryResult">
+								<td>{{result.word}}</td>
+								<td>{{result.count}}</td>
+							</tr>
+					</table>
+			      </div>
+			      <div class="modal-footer">
+			        <button class="btn" ng-click="close(tweetWordConstant)">Cancel</button>
+			      </div>
+		    </div>
+		    
+		    <div class="modal-color" modal="showHashTagModal" close="cancel("HASH_TAG")">
+			      <div class="modal-header">
+			          <h4>Top 10 Tweet For #{{hashTagQueryParam}}</h4>
+			      </div>
+			      <div class="modal-body">
+			          <div ng-repeat="result in hashTagQueryResult">
+			          	<p>{{$index+1}}. {{result.tweet}}</p>
+			          </div>
+			      </div>
+			      <div class="modal-footer">
+			        <button class="btn" ng-click="close(hashTagConstant)">Cancel</button>
+			      </div>
+		    </div>
+    
+		</div>
+	</body>	
+</html>

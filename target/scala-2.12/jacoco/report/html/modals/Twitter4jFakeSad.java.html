@@ -1,0 +1,3276 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Twitter4jFakeSad.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">modals</a> &gt; <span class="el_source">Twitter4jFakeSad.java</span></div><h1>Twitter4jFakeSad.java</h1><pre class="source lang-java linenums">package modals;
+
+import java.io.File;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+
+import twitter4j.AccountSettings;
+import twitter4j.Category;
+import twitter4j.DirectMessage;
+import twitter4j.ExtendedMediaEntity;
+import twitter4j.Friendship;
+import twitter4j.GeoLocation;
+import twitter4j.GeoQuery;
+import twitter4j.HashtagEntity;
+import twitter4j.IDs;
+import twitter4j.Location;
+import twitter4j.MediaEntity;
+import twitter4j.OEmbed;
+import twitter4j.OEmbedRequest;
+import twitter4j.PagableResponseList;
+import twitter4j.Paging;
+import twitter4j.Place;
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.RateLimitStatus;
+import twitter4j.RateLimitStatusEvent;
+import twitter4j.RateLimitStatusListener;
+import twitter4j.Relationship;
+import twitter4j.ResponseList;
+import twitter4j.SavedSearch;
+import twitter4j.Scopes;
+import twitter4j.Status;
+import twitter4j.StatusUpdate;
+import twitter4j.SymbolEntity;
+import twitter4j.Trends;
+import twitter4j.Twitter;
+import twitter4j.TwitterAPIConfiguration;
+import twitter4j.TwitterException;
+import twitter4j.URLEntity;
+import twitter4j.UploadedMedia;
+import twitter4j.User;
+import twitter4j.UserList;
+import twitter4j.UserMentionEntity;
+import twitter4j.api.DirectMessagesResources;
+import twitter4j.api.FavoritesResources;
+import twitter4j.api.FriendsFollowersResources;
+import twitter4j.api.HelpResources;
+import twitter4j.api.ListsResources;
+import twitter4j.api.PlacesGeoResources;
+import twitter4j.api.SavedSearchesResources;
+import twitter4j.api.SearchResource;
+import twitter4j.api.SpamReportingResource;
+import twitter4j.api.SuggestedUsersResources;
+import twitter4j.api.TimelinesResources;
+import twitter4j.api.TrendsResources;
+import twitter4j.api.TweetsResources;
+import twitter4j.api.UsersResources;
+import twitter4j.auth.AccessToken;
+import twitter4j.auth.Authorization;
+import twitter4j.auth.OAuth2Token;
+import twitter4j.auth.RequestToken;
+import twitter4j.conf.Configuration;
+import twitter4j.util.function.Consumer;
+
+<span class="fc" id="L71">public class Twitter4jFakeSad implements Twitter{</span>
+
+	@Override
+	public AccessToken getOAuthAccessToken() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L76">		return null;</span>
+	}
+
+	@Override
+	public AccessToken getOAuthAccessToken(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L82">		return null;</span>
+	}
+
+	@Override
+	public AccessToken getOAuthAccessToken(RequestToken arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L88">		return null;</span>
+	}
+
+	@Override
+	public AccessToken getOAuthAccessToken(RequestToken arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L94">		return null;</span>
+	}
+
+	@Override
+	public AccessToken getOAuthAccessToken(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L100">		return null;</span>
+	}
+
+	@Override
+	public RequestToken getOAuthRequestToken() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L106">		return null;</span>
+	}
+
+	@Override
+	public RequestToken getOAuthRequestToken(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L112">		return null;</span>
+	}
+
+	@Override
+	public RequestToken getOAuthRequestToken(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L118">		return null;</span>
+	}
+
+	@Override
+	public RequestToken getOAuthRequestToken(String arg0, String arg1, String arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L124">		return null;</span>
+	}
+
+	@Override
+	public void setOAuthAccessToken(AccessToken arg0) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L131">	}</span>
+
+	@Override
+	public void setOAuthConsumer(String arg0, String arg1) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L137">	}</span>
+
+	@Override
+	public OAuth2Token getOAuth2Token() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L142">		return null;</span>
+	}
+
+	@Override
+	public void invalidateOAuth2Token() throws TwitterException {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L149">	}</span>
+
+	@Override
+	public void setOAuth2Token(OAuth2Token arg0) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L155">	}</span>
+
+	@Override
+	public void addRateLimitStatusListener(RateLimitStatusListener arg0) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L161">	}</span>
+
+	@Override
+	public Authorization getAuthorization() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L166">		return null;</span>
+	}
+
+	@Override
+	public Configuration getConfiguration() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L172">		return null;</span>
+	}
+
+	@Override
+	public long getId() throws TwitterException, IllegalStateException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L178">		return 0;</span>
+	}
+
+	@Override
+	public String getScreenName() throws TwitterException, IllegalStateException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L184">		return null;</span>
+	}
+
+	@Override
+	public void onRateLimitReached(Consumer&lt;RateLimitStatusEvent&gt; arg0) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L191">	}</span>
+
+	@Override
+	public void onRateLimitStatus(Consumer&lt;RateLimitStatusEvent&gt; arg0) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L197">	}</span>
+
+	@Override
+	public ResponseList&lt;Status&gt; getHomeTimeline() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L202">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getHomeTimeline(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L208">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getMentionsTimeline() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L214">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getMentionsTimeline(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L220">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getRetweetsOfMe() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L226">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getRetweetsOfMe(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L232">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L238">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L244">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L250">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L256">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline(String arg0, Paging arg1) throws TwitterException {
+
+<span class="nc" id="L262">		Status s = new Status() {</span>
+			
+			@Override
+			public UserMentionEntity[] getUserMentionEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L267">				return null;</span>
+			}
+			
+			@Override
+			public URLEntity[] getURLEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L273">				return null;</span>
+			}
+			
+			@Override
+			public SymbolEntity[] getSymbolEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L279">				return null;</span>
+			}
+			
+			@Override
+			public MediaEntity[] getMediaEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L285">				return null;</span>
+			}
+			
+			@Override
+			public HashtagEntity[] getHashtagEntities() {
+<span class="nc" id="L290">				HashtagEntity he = new HashtagEntity() {</span>
+					
+					@Override
+					public String getText() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L295">						return &quot;🙁&quot;;</span>
+					}
+					
+					@Override
+					public int getStart() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L301">						return 0;</span>
+					}
+					
+					@Override
+					public int getEnd() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L307">						return 0;</span>
+					}
+				};
+<span class="nc" id="L310">				HashtagEntity h[] = new HashtagEntity[1];</span>
+<span class="nc" id="L311">				h[0]=he;</span>
+<span class="nc" id="L312">				return h;</span>
+			}
+			
+			@Override
+			public ExtendedMediaEntity[] getExtendedMediaEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L318">				return null;</span>
+			}
+			
+			@Override
+			public RateLimitStatus getRateLimitStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L324">				return null;</span>
+			}
+			
+			@Override
+			public int getAccessLevel() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L330">				return 0;</span>
+			}
+			
+			@Override
+			public int compareTo(Status o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L336">				return 0;</span>
+			}
+			
+			@Override
+			public boolean isTruncated() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L342">				return false;</span>
+			}
+			
+			@Override
+			public boolean isRetweetedByMe() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L348">				return false;</span>
+			}
+			
+			@Override
+			public boolean isRetweeted() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L354">				return false;</span>
+			}
+			
+			@Override
+			public boolean isRetweet() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L360">				return false;</span>
+			}
+			
+			@Override
+			public boolean isPossiblySensitive() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L366">				return false;</span>
+			}
+			
+			@Override
+			public boolean isFavorited() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L372">				return false;</span>
+			}
+			
+			@Override
+			public String[] getWithheldInCountries() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L378">				return null;</span>
+			}
+			
+			@Override
+			public User getUser() {
+<span class="nc" id="L383">				return new User() {</span>
+					
+					@Override
+					public RateLimitStatus getRateLimitStatus() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L388">						return null;</span>
+					}
+					
+					@Override
+					public int getAccessLevel() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L394">						return 0;</span>
+					}
+					
+					@Override
+					public int compareTo(User o) {
+						// TODO Auto-generated method stub
+<span class="nc" id="L400">						return 0;</span>
+					}
+					
+					@Override
+					public boolean isVerified() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L406">						return false;</span>
+					}
+					
+					@Override
+					public boolean isTranslator() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L412">						return false;</span>
+					}
+					
+					@Override
+					public boolean isShowAllInlineMedia() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L418">						return false;</span>
+					}
+					
+					@Override
+					public boolean isProtected() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L424">						return false;</span>
+					}
+					
+					@Override
+					public boolean isProfileUseBackgroundImage() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L430">						return false;</span>
+					}
+					
+					@Override
+					public boolean isProfileBackgroundTiled() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L436">						return false;</span>
+					}
+					
+					@Override
+					public boolean isGeoEnabled() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L442">						return false;</span>
+					}
+					
+					@Override
+					public boolean isFollowRequestSent() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L448">						return false;</span>
+					}
+					
+					@Override
+					public boolean isDefaultProfileImage() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L454">						return false;</span>
+					}
+					
+					@Override
+					public boolean isDefaultProfile() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L460">						return false;</span>
+					}
+					
+					@Override
+					public boolean isContributorsEnabled() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L466">						return false;</span>
+					}
+					
+					@Override
+					public String[] getWithheldInCountries() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L472">						return null;</span>
+					}
+					
+					@Override
+					public int getUtcOffset() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L478">						return 0;</span>
+					}
+					
+					@Override
+					public URLEntity getURLEntity() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L484">						return null;</span>
+					}
+					
+					@Override
+					public String getURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L490">						return null;</span>
+					}
+					
+					@Override
+					public String getTimeZone() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L496">						return null;</span>
+					}
+					
+					@Override
+					public int getStatusesCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L502">						return 0;</span>
+					}
+					
+					@Override
+					public Status getStatus() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L508">						return null;</span>
+					}
+					
+					@Override
+					public String getScreenName() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L514">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileTextColor() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L520">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileSidebarFillColor() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L526">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileSidebarBorderColor() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L532">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileLinkColor() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L538">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileImageURLHttps() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L544">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileImageURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L550">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L556">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerRetinaURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L562">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerMobileURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L568">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerMobileRetinaURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L574">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerIPadURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L580">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBannerIPadRetinaURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L586">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBackgroundImageUrlHttps() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L592">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBackgroundImageURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L598">						return null;</span>
+					}
+					
+					@Override
+					public String getProfileBackgroundColor() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L604">						return null;</span>
+					}
+					
+					@Override
+					public String getOriginalProfileImageURLHttps() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L610">						return null;</span>
+					}
+					
+					@Override
+					public String getOriginalProfileImageURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L616">						return null;</span>
+					}
+					
+					@Override
+					public String getName() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L622">						return null;</span>
+					}
+					
+					@Override
+					public String getMiniProfileImageURLHttps() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L628">						return null;</span>
+					}
+					
+					@Override
+					public String getMiniProfileImageURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L634">						return null;</span>
+					}
+					
+					@Override
+					public String getLocation() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L640">						return null;</span>
+					}
+					
+					@Override
+					public int getListedCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L646">						return 0;</span>
+					}
+					
+					@Override
+					public String getLang() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L652">						return null;</span>
+					}
+					
+					@Override
+					public long getId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L658">						return 0;</span>
+					}
+					
+					@Override
+					public int getFriendsCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L664">						return 0;</span>
+					}
+					
+					@Override
+					public int getFollowersCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L670">						return 0;</span>
+					}
+					
+					@Override
+					public int getFavouritesCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L676">						return 0;</span>
+					}
+					
+					@Override
+					public URLEntity[] getDescriptionURLEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L682">						return null;</span>
+					}
+					
+					@Override
+					public String getDescription() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L688">						return null;</span>
+					}
+					
+					@Override
+					public Date getCreatedAt() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L694">						return null;</span>
+					}
+					
+					@Override
+					public String getBiggerProfileImageURLHttps() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L700">						return null;</span>
+					}
+					
+					@Override
+					public String getBiggerProfileImageURL() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L706">						return null;</span>
+					}
+				};
+			}
+			
+			@Override
+			public String getText() {
+				
+<span class="nc" id="L714">				return &quot;🙁&quot;;</span>
+			}
+			
+			@Override
+			public String getSource() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L720">				return null;</span>
+			}
+			
+			@Override
+			public Scopes getScopes() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L726">				return null;</span>
+			}
+			
+			@Override
+			public Status getRetweetedStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L732">				return null;</span>
+			}
+			
+			@Override
+			public int getRetweetCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L738">				return 0;</span>
+			}
+			
+			@Override
+			public long getQuotedStatusId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L744">				return 0;</span>
+			}
+			
+			@Override
+			public Status getQuotedStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L750">				return null;</span>
+			}
+			
+			@Override
+			public Place getPlace() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L756">				return null;</span>
+			}
+			
+			@Override
+			public String getLang() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L762">				return null;</span>
+			}
+			
+			@Override
+			public long getInReplyToUserId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L768">				return 0;</span>
+			}
+			
+			@Override
+			public long getInReplyToStatusId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L774">				return 0;</span>
+			}
+			
+			@Override
+			public String getInReplyToScreenName() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L780">				return null;</span>
+			}
+			
+			@Override
+			public long getId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L786">				return 0;</span>
+			}
+			
+			@Override
+			public GeoLocation getGeoLocation() {
+<span class="nc" id="L791">				return new GeoLocation( 45.5088400,  -73.5878100);</span>
+			}
+			
+			@Override
+			public int getFavoriteCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L797">				return 0;</span>
+			}
+			
+			@Override
+			public long getCurrentUserRetweetId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L803">				return 0;</span>
+			}
+			
+			@Override
+			public Date getCreatedAt() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L809">				return null;</span>
+			}
+			
+			@Override
+			public long[] getContributors() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L815">				return null;</span>
+			}
+		};
+<span class="nc" id="L818">		ResponseList&lt;Status&gt; result = new ResponseList&lt;Status&gt;() {</span>
+
+			@Override
+			public int getAccessLevel() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L823">				return 0;</span>
+			}
+
+			@Override
+			public int size() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L829">				return 1;</span>
+			}
+
+			@Override
+			public boolean isEmpty() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L835">				return false;</span>
+			}
+
+			@Override
+			public boolean contains(Object o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L841">				return false;</span>
+			}
+
+			@Override
+			public Iterator&lt;Status&gt; iterator() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L847">				return null;</span>
+			}
+
+			@Override
+			public Object[] toArray() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L853">				return null;</span>
+			}
+
+			@Override
+			public &lt;T&gt; T[] toArray(T[] a) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L859">				return null;</span>
+			}
+
+			@Override
+			public boolean add(Status e) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L865">				return false;</span>
+			}
+
+			@Override
+			public boolean remove(Object o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L871">				return false;</span>
+			}
+
+			@Override
+			public boolean containsAll(Collection&lt;?&gt; c) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L877">				return false;</span>
+			}
+
+			@Override
+			public boolean addAll(Collection&lt;? extends Status&gt; c) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L883">				return false;</span>
+			}
+
+			@Override
+			public boolean addAll(int index, Collection&lt;? extends Status&gt; c) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L889">				return false;</span>
+			}
+
+			@Override
+			public boolean removeAll(Collection&lt;?&gt; c) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L895">				return false;</span>
+			}
+
+			@Override
+			public boolean retainAll(Collection&lt;?&gt; c) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L901">				return false;</span>
+			}
+
+			@Override
+			public void clear() {
+				// TODO Auto-generated method stub
+				
+<span class="nc" id="L908">			}</span>
+
+			@Override
+			public Status get(int index) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L913">				return null;</span>
+			}
+
+			@Override
+			public Status set(int index, Status element) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L919">				return null;</span>
+			}
+
+			@Override
+			public void add(int index, Status element) {
+				// TODO Auto-generated method stub
+				
+<span class="nc" id="L926">			}</span>
+
+			@Override
+			public Status remove(int index) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L931">				return null;</span>
+			}
+
+			@Override
+			public int indexOf(Object o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L937">				return 0;</span>
+			}
+
+			@Override
+			public int lastIndexOf(Object o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L943">				return 0;</span>
+			}
+
+			@Override
+			public ListIterator&lt;Status&gt; listIterator() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L949">				return null;</span>
+			}
+
+			@Override
+			public ListIterator&lt;Status&gt; listIterator(int index) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L955">				return null;</span>
+			}
+
+			@Override
+			public List&lt;Status&gt; subList(int fromIndex, int toIndex) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L961">				return null;</span>
+			}
+
+			@Override
+			public RateLimitStatus getRateLimitStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L967">				return null;</span>
+			}
+		};
+<span class="nc" id="L970">		result.add(s);</span>
+<span class="nc" id="L971">		return result;</span>
+	
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserTimeline(long arg0, Paging arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L978">		return null;</span>
+	}
+
+	@Override
+	public Status destroyStatus(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L984">		return null;</span>
+	}
+
+	@Override
+	public OEmbed getOEmbed(OEmbedRequest arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L990">		return null;</span>
+	}
+
+	@Override
+	public IDs getRetweeterIds(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L996">		return null;</span>
+	}
+
+	@Override
+	public IDs getRetweeterIds(long arg0, int arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1002">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getRetweets(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1008">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; lookup(long... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1014">		return null;</span>
+	}
+
+	@Override
+	public Status retweetStatus(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1020">		return null;</span>
+	}
+
+	@Override
+	public Status showStatus(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1026">		return null;</span>
+	}
+
+	@Override
+	public Status updateStatus(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1032">		return null;</span>
+	}
+
+	@Override
+	public Status updateStatus(StatusUpdate arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1038">		return null;</span>
+	}
+
+	@Override
+	public UploadedMedia uploadMedia(File arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1044">		return null;</span>
+	}
+
+	@Override
+	public UploadedMedia uploadMedia(String arg0, InputStream arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1050">		return null;</span>
+	}
+
+	@Override
+	public QueryResult search(Query arg0) throws TwitterException {
+<span class="fc" id="L1055">		return new QueryResult() {</span>
+			
+			@Override
+			public RateLimitStatus getRateLimitStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1060">				return null;</span>
+			}
+			
+			@Override
+			public int getAccessLevel() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1066">				return 0;</span>
+			}
+			
+			@Override
+			public Query nextQuery() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1072">				return null;</span>
+			}
+			
+			@Override
+			public boolean hasNext() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1078">				return false;</span>
+			}
+			
+			@Override
+			public List&lt;Status&gt; getTweets() {
+<span class="fc" id="L1083">				Status s = new Status() {</span>
+					
+					@Override
+					public UserMentionEntity[] getUserMentionEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1088">						return null;</span>
+					}
+					
+					@Override
+					public URLEntity[] getURLEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1094">						return null;</span>
+					}
+					
+					@Override
+					public SymbolEntity[] getSymbolEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1100">						return null;</span>
+					}
+					
+					@Override
+					public MediaEntity[] getMediaEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1106">						return null;</span>
+					}
+					
+					@Override
+					public HashtagEntity[] getHashtagEntities() {
+<span class="fc" id="L1111">						HashtagEntity he = new HashtagEntity() {</span>
+							
+							@Override
+							public String getText() {
+								// TODO Auto-generated method stub
+<span class="fc" id="L1116">								return &quot;🙁&quot;;</span>
+							}
+							
+							@Override
+							public int getStart() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1122">								return 0;</span>
+							}
+							
+							@Override
+							public int getEnd() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1128">								return 0;</span>
+							}
+						};
+<span class="fc" id="L1131">						HashtagEntity h[] = new HashtagEntity[1];</span>
+<span class="fc" id="L1132">						h[0]=he;</span>
+<span class="fc" id="L1133">						return h;</span>
+					}
+					
+					@Override
+					public ExtendedMediaEntity[] getExtendedMediaEntities() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1139">						return null;</span>
+					}
+					
+					@Override
+					public RateLimitStatus getRateLimitStatus() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1145">						return null;</span>
+					}
+					
+					@Override
+					public int getAccessLevel() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1151">						return 0;</span>
+					}
+					
+					@Override
+					public int compareTo(Status o) {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1157">						return 0;</span>
+					}
+					
+					@Override
+					public boolean isTruncated() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1163">						return false;</span>
+					}
+					
+					@Override
+					public boolean isRetweetedByMe() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1169">						return false;</span>
+					}
+					
+					@Override
+					public boolean isRetweeted() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1175">						return false;</span>
+					}
+					
+					@Override
+					public boolean isRetweet() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1181">						return false;</span>
+					}
+					
+					@Override
+					public boolean isPossiblySensitive() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1187">						return false;</span>
+					}
+					
+					@Override
+					public boolean isFavorited() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1193">						return false;</span>
+					}
+					
+					@Override
+					public String[] getWithheldInCountries() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1199">						return null;</span>
+					}
+					
+					@Override
+					public User getUser() {
+<span class="fc" id="L1204">						return new User() {</span>
+							
+							@Override
+							public RateLimitStatus getRateLimitStatus() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1209">								return null;</span>
+							}
+							
+							@Override
+							public int getAccessLevel() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1215">								return 0;</span>
+							}
+							
+							@Override
+							public int compareTo(User o) {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1221">								return 0;</span>
+							}
+							
+							@Override
+							public boolean isVerified() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1227">								return false;</span>
+							}
+							
+							@Override
+							public boolean isTranslator() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1233">								return false;</span>
+							}
+							
+							@Override
+							public boolean isShowAllInlineMedia() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1239">								return false;</span>
+							}
+							
+							@Override
+							public boolean isProtected() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1245">								return false;</span>
+							}
+							
+							@Override
+							public boolean isProfileUseBackgroundImage() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1251">								return false;</span>
+							}
+							
+							@Override
+							public boolean isProfileBackgroundTiled() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1257">								return false;</span>
+							}
+							
+							@Override
+							public boolean isGeoEnabled() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1263">								return false;</span>
+							}
+							
+							@Override
+							public boolean isFollowRequestSent() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1269">								return false;</span>
+							}
+							
+							@Override
+							public boolean isDefaultProfileImage() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1275">								return false;</span>
+							}
+							
+							@Override
+							public boolean isDefaultProfile() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1281">								return false;</span>
+							}
+							
+							@Override
+							public boolean isContributorsEnabled() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1287">								return false;</span>
+							}
+							
+							@Override
+							public String[] getWithheldInCountries() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1293">								return null;</span>
+							}
+							
+							@Override
+							public int getUtcOffset() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1299">								return 0;</span>
+							}
+							
+							@Override
+							public URLEntity getURLEntity() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1305">								return null;</span>
+							}
+							
+							@Override
+							public String getURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1311">								return null;</span>
+							}
+							
+							@Override
+							public String getTimeZone() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1317">								return null;</span>
+							}
+							
+							@Override
+							public int getStatusesCount() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1323">								return 0;</span>
+							}
+							
+							@Override
+							public Status getStatus() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1329">								return null;</span>
+							}
+							
+							@Override
+							public String getScreenName() {
+								// TODO Auto-generated method stub
+<span class="fc" id="L1335">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileTextColor() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1341">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileSidebarFillColor() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1347">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileSidebarBorderColor() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1353">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileLinkColor() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1359">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileImageURLHttps() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1365">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileImageURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1371">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1377">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerRetinaURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1383">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerMobileURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1389">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerMobileRetinaURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1395">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerIPadURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1401">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBannerIPadRetinaURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1407">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBackgroundImageUrlHttps() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1413">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBackgroundImageURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1419">								return null;</span>
+							}
+							
+							@Override
+							public String getProfileBackgroundColor() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1425">								return null;</span>
+							}
+							
+							@Override
+							public String getOriginalProfileImageURLHttps() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1431">								return null;</span>
+							}
+							
+							@Override
+							public String getOriginalProfileImageURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1437">								return null;</span>
+							}
+							
+							@Override
+							public String getName() {
+								// TODO Auto-generated method stub
+<span class="fc" id="L1443">								return null;</span>
+							}
+							
+							@Override
+							public String getMiniProfileImageURLHttps() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1449">								return null;</span>
+							}
+							
+							@Override
+							public String getMiniProfileImageURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1455">								return null;</span>
+							}
+							
+							@Override
+							public String getLocation() {
+								// TODO Auto-generated method stub
+<span class="fc" id="L1461">								return null;</span>
+							}
+							
+							@Override
+							public int getListedCount() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1467">								return 0;</span>
+							}
+							
+							@Override
+							public String getLang() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1473">								return null;</span>
+							}
+							
+							@Override
+							public long getId() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1479">								return 0;</span>
+							}
+							
+							@Override
+							public int getFriendsCount() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1485">								return 0;</span>
+							}
+							
+							@Override
+							public int getFollowersCount() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1491">								return 0;</span>
+							}
+							
+							@Override
+							public int getFavouritesCount() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1497">								return 0;</span>
+							}
+							
+							@Override
+							public URLEntity[] getDescriptionURLEntities() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1503">								return null;</span>
+							}
+							
+							@Override
+							public String getDescription() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1509">								return null;</span>
+							}
+							
+							@Override
+							public Date getCreatedAt() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1515">								return null;</span>
+							}
+							
+							@Override
+							public String getBiggerProfileImageURLHttps() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1521">								return null;</span>
+							}
+							
+							@Override
+							public String getBiggerProfileImageURL() {
+								// TODO Auto-generated method stub
+<span class="nc" id="L1527">								return null;</span>
+							}
+						};
+					}
+					
+					@Override
+					public String getText() {
+						
+<span class="fc" id="L1535">						return &quot;🙁&quot;;</span>
+					}
+					
+					@Override
+					public String getSource() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1541">						return null;</span>
+					}
+					
+					@Override
+					public Scopes getScopes() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1547">						return null;</span>
+					}
+					
+					@Override
+					public Status getRetweetedStatus() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1553">						return null;</span>
+					}
+					
+					@Override
+					public int getRetweetCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1559">						return 0;</span>
+					}
+					
+					@Override
+					public long getQuotedStatusId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1565">						return 0;</span>
+					}
+					
+					@Override
+					public Status getQuotedStatus() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1571">						return null;</span>
+					}
+					
+					@Override
+					public Place getPlace() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1577">						return null;</span>
+					}
+					
+					@Override
+					public String getLang() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1583">						return null;</span>
+					}
+					
+					@Override
+					public long getInReplyToUserId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1589">						return 0;</span>
+					}
+					
+					@Override
+					public long getInReplyToStatusId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1595">						return 0;</span>
+					}
+					
+					@Override
+					public String getInReplyToScreenName() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1601">						return null;</span>
+					}
+					
+					@Override
+					public long getId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1607">						return 0;</span>
+					}
+					
+					@Override
+					public GeoLocation getGeoLocation() {
+<span class="fc" id="L1612">						return new GeoLocation( 45.5088400,  -73.5878100);</span>
+					}
+					
+					@Override
+					public int getFavoriteCount() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1618">						return 0;</span>
+					}
+					
+					@Override
+					public long getCurrentUserRetweetId() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1624">						return 0;</span>
+					}
+					
+					@Override
+					public Date getCreatedAt() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1630">						return null;</span>
+					}
+					
+					@Override
+					public long[] getContributors() {
+						// TODO Auto-generated method stub
+<span class="nc" id="L1636">						return null;</span>
+					}
+				};
+<span class="fc" id="L1639">				List&lt;Status&gt; result = new ArrayList&lt;Status&gt;();</span>
+<span class="fc" id="L1640">				result.add(s);</span>
+<span class="fc" id="L1641">				return result;</span>
+			}
+			
+			@Override
+			public long getSinceId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1647">				return 0;</span>
+			}
+			
+			@Override
+			public String getRefreshURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1653">				return null;</span>
+			}
+			
+			@Override
+			public String getQuery() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1659">				return null;</span>
+			}
+			
+			@Override
+			public long getMaxId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1665">				return 0;</span>
+			}
+			
+			@Override
+			public int getCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1671">				return 0;</span>
+			}
+			
+			@Override
+			public double getCompletedIn() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L1677">				return 0;</span>
+			}
+		};
+	}
+
+	@Override
+	public DirectMessage destroyDirectMessage(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1685">		return null;</span>
+	}
+
+	@Override
+	public InputStream getDMImageAsStream(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1691">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;DirectMessage&gt; getDirectMessages() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1697">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;DirectMessage&gt; getDirectMessages(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1703">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;DirectMessage&gt; getSentDirectMessages() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1709">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;DirectMessage&gt; getSentDirectMessages(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1715">		return null;</span>
+	}
+
+	@Override
+	public DirectMessage sendDirectMessage(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1721">		return null;</span>
+	}
+
+	@Override
+	public DirectMessage sendDirectMessage(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1727">		return null;</span>
+	}
+
+	@Override
+	public DirectMessage showDirectMessage(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1733">		return null;</span>
+	}
+
+	@Override
+	public User createFriendship(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1739">		return null;</span>
+	}
+
+	@Override
+	public User createFriendship(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1745">		return null;</span>
+	}
+
+	@Override
+	public User createFriendship(long arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1751">		return null;</span>
+	}
+
+	@Override
+	public User createFriendship(String arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1757">		return null;</span>
+	}
+
+	@Override
+	public User destroyFriendship(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1763">		return null;</span>
+	}
+
+	@Override
+	public User destroyFriendship(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1769">		return null;</span>
+	}
+
+	@Override
+	public IDs getFollowersIDs(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1775">		return null;</span>
+	}
+
+	@Override
+	public IDs getFollowersIDs(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1781">		return null;</span>
+	}
+
+	@Override
+	public IDs getFollowersIDs(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1787">		return null;</span>
+	}
+
+	@Override
+	public IDs getFollowersIDs(long arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1793">		return null;</span>
+	}
+
+	@Override
+	public IDs getFollowersIDs(String arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1799">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1805">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1811">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(long arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1817">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(String arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1823">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(long arg0, long arg1, int arg2, boolean arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1830">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFollowersList(String arg0, long arg1, int arg2, boolean arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1837">		return null;</span>
+	}
+
+	@Override
+	public IDs getFriendsIDs(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1843">		return null;</span>
+	}
+
+	@Override
+	public IDs getFriendsIDs(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1849">		return null;</span>
+	}
+
+	@Override
+	public IDs getFriendsIDs(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1855">		return null;</span>
+	}
+
+	@Override
+	public IDs getFriendsIDs(long arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1861">		return null;</span>
+	}
+
+	@Override
+	public IDs getFriendsIDs(String arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1867">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1873">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1879">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(long arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1885">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(String arg0, long arg1, int arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1891">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(long arg0, long arg1, int arg2, boolean arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1898">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getFriendsList(String arg0, long arg1, int arg2, boolean arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1905">		return null;</span>
+	}
+
+	@Override
+	public IDs getIncomingFriendships(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1911">		return null;</span>
+	}
+
+	@Override
+	public IDs getNoRetweetsFriendships() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1917">		return null;</span>
+	}
+
+	@Override
+	public IDs getOutgoingFriendships(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1923">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Friendship&gt; lookupFriendships(long... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1929">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Friendship&gt; lookupFriendships(String... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1935">		return null;</span>
+	}
+
+	@Override
+	public Relationship showFriendship(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1941">		return null;</span>
+	}
+
+	@Override
+	public Relationship showFriendship(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1947">		return null;</span>
+	}
+
+	@Override
+	public Relationship updateFriendship(long arg0, boolean arg1, boolean arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1953">		return null;</span>
+	}
+
+	@Override
+	public Relationship updateFriendship(String arg0, boolean arg1, boolean arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1959">		return null;</span>
+	}
+
+	@Override
+	public User createBlock(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1965">		return null;</span>
+	}
+
+	@Override
+	public User createBlock(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1971">		return null;</span>
+	}
+
+	@Override
+	public User createMute(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1977">		return null;</span>
+	}
+
+	@Override
+	public User createMute(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1983">		return null;</span>
+	}
+
+	@Override
+	public User destroyBlock(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1989">		return null;</span>
+	}
+
+	@Override
+	public User destroyBlock(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L1995">		return null;</span>
+	}
+
+	@Override
+	public User destroyMute(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2001">		return null;</span>
+	}
+
+	@Override
+	public User destroyMute(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2007">		return null;</span>
+	}
+
+	@Override
+	public AccountSettings getAccountSettings() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2013">		return null;</span>
+	}
+
+	@Override
+	public IDs getBlocksIDs() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2019">		return null;</span>
+	}
+
+	@Override
+	public IDs getBlocksIDs(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2025">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getBlocksList() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2031">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getBlocksList(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2037">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getContributees(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2043">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getContributees(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2049">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getContributors(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2055">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getContributors(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2061">		return null;</span>
+	}
+
+	@Override
+	public IDs getMutesIDs(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2067">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getMutesList(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2073">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; lookupUsers(long... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2079">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; lookupUsers(String... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2085">		return null;</span>
+	}
+
+	@Override
+	public void removeProfileBanner() throws TwitterException {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L2092">	}</span>
+
+	@Override
+	public ResponseList&lt;User&gt; searchUsers(String arg0, int arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2097">		return null;</span>
+	}
+
+	@Override
+	public User showUser(long arg0) throws TwitterException {
+		
+<span class="nc" id="L2103">		return null;</span>
+	}
+
+	@Override
+	public User showUser(String arg0) throws TwitterException {
+
+<span class="nc" id="L2109">		User user = new User() {</span>
+			
+			@Override
+			public RateLimitStatus getRateLimitStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2114">				return null;</span>
+			}
+			
+			@Override
+			public int getAccessLevel() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2120">				return 0;</span>
+			}
+			
+			@Override
+			public int compareTo(User o) {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2126">				return 0;</span>
+			}
+			
+			@Override
+			public boolean isVerified() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2132">				return false;</span>
+			}
+			
+			@Override
+			public boolean isTranslator() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2138">				return false;</span>
+			}
+			
+			@Override
+			public boolean isShowAllInlineMedia() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2144">				return false;</span>
+			}
+			
+			@Override
+			public boolean isProtected() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2150">				return false;</span>
+			}
+			
+			@Override
+			public boolean isProfileUseBackgroundImage() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2156">				return false;</span>
+			}
+			
+			@Override
+			public boolean isProfileBackgroundTiled() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2162">				return false;</span>
+			}
+			
+			@Override
+			public boolean isGeoEnabled() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2168">				return false;</span>
+			}
+			
+			@Override
+			public boolean isFollowRequestSent() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2174">				return false;</span>
+			}
+			
+			@Override
+			public boolean isDefaultProfileImage() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2180">				return false;</span>
+			}
+			
+			@Override
+			public boolean isDefaultProfile() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2186">				return false;</span>
+			}
+			
+			@Override
+			public boolean isContributorsEnabled() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2192">				return false;</span>
+			}
+			
+			@Override
+			public String[] getWithheldInCountries() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2198">				return null;</span>
+			}
+			
+			@Override
+			public int getUtcOffset() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2204">				return 0;</span>
+			}
+			
+			@Override
+			public URLEntity getURLEntity() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2210">				return null;</span>
+			}
+			
+			@Override
+			public String getURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2216">				return null;</span>
+			}
+			
+			@Override
+			public String getTimeZone() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2222">				return null;</span>
+			}
+			
+			@Override
+			public int getStatusesCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2228">				return 0;</span>
+			}
+			
+			@Override
+			public Status getStatus() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2234">				return null;</span>
+			}
+			
+			@Override
+			public String getScreenName() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2240">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileTextColor() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2246">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileSidebarFillColor() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2252">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileSidebarBorderColor() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2258">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileLinkColor() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2264">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileImageURLHttps() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2270">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileImageURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2276">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2282">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerRetinaURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2288">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerMobileURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2294">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerMobileRetinaURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2300">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerIPadURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2306">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBannerIPadRetinaURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2312">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBackgroundImageUrlHttps() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2318">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBackgroundImageURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2324">				return null;</span>
+			}
+			
+			@Override
+			public String getProfileBackgroundColor() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2330">				return null;</span>
+			}
+			
+			@Override
+			public String getOriginalProfileImageURLHttps() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2336">				return null;</span>
+			}
+			
+			@Override
+			public String getOriginalProfileImageURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2342">				return null;</span>
+			}
+			
+			@Override
+			public String getName() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2348">				return null;</span>
+			}
+			
+			@Override
+			public String getMiniProfileImageURLHttps() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2354">				return null;</span>
+			}
+			
+			@Override
+			public String getMiniProfileImageURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2360">				return null;</span>
+			}
+			
+			@Override
+			public String getLocation() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2366">				return null;</span>
+			}
+			
+			@Override
+			public int getListedCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2372">				return 0;</span>
+			}
+			
+			@Override
+			public String getLang() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2378">				return null;</span>
+			}
+			
+			@Override
+			public long getId() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2384">				return 0;</span>
+			}
+			
+			@Override
+			public int getFriendsCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2390">				return 0;</span>
+			}
+			
+			@Override
+			public int getFollowersCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2396">				return 0;</span>
+			}
+			
+			@Override
+			public int getFavouritesCount() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2402">				return 0;</span>
+			}
+			
+			@Override
+			public URLEntity[] getDescriptionURLEntities() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2408">				return null;</span>
+			}
+			
+			@Override
+			public String getDescription() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2414">				return null;</span>
+			}
+			
+			@Override
+			public Date getCreatedAt() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2420">				return null;</span>
+			}
+			
+			@Override
+			public String getBiggerProfileImageURLHttps() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2426">				return null;</span>
+			}
+			
+			@Override
+			public String getBiggerProfileImageURL() {
+				// TODO Auto-generated method stub
+<span class="nc" id="L2432">				return null;</span>
+			}
+		};
+<span class="nc" id="L2435">		return user;</span>
+	
+	}
+
+	@Override
+	public AccountSettings updateAccountSettings(Integer arg0, Boolean arg1, String arg2, String arg3, String arg4,
+			String arg5) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2443">		return null;</span>
+	}
+
+	@Override
+	public User updateProfile(String arg0, String arg1, String arg2, String arg3) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2449">		return null;</span>
+	}
+
+	@Override
+	public User updateProfileBackgroundImage(File arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2455">		return null;</span>
+	}
+
+	@Override
+	public User updateProfileBackgroundImage(InputStream arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2461">		return null;</span>
+	}
+
+	@Override
+	public void updateProfileBanner(File arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L2468">	}</span>
+
+	@Override
+	public void updateProfileBanner(InputStream arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L2474">	}</span>
+
+	@Override
+	public User updateProfileColors(String arg0, String arg1, String arg2, String arg3, String arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2480">		return null;</span>
+	}
+
+	@Override
+	public User updateProfileImage(File arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2486">		return null;</span>
+	}
+
+	@Override
+	public User updateProfileImage(InputStream arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2492">		return null;</span>
+	}
+
+	@Override
+	public User verifyCredentials() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2498">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getMemberSuggestions(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2504">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Category&gt; getSuggestedUserCategories() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2510">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;User&gt; getUserSuggestions(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2516">		return null;</span>
+	}
+
+	@Override
+	public Status createFavorite(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2522">		return null;</span>
+	}
+
+	@Override
+	public Status destroyFavorite(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2528">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2534">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2540">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2546">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites(Paging arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2552">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites(long arg0, Paging arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2558">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getFavorites(String arg0, Paging arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2564">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserList(String arg0, boolean arg1, String arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2570">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMember(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2576">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMember(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2582">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMember(String arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2588">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(long arg0, long... arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2594">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(long arg0, String... arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2600">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(long arg0, String arg1, long... arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2606">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(String arg0, String arg1, long... arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2612">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(long arg0, String arg1, String... arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2618">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListMembers(String arg0, String arg1, String... arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2624">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListSubscription(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2630">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListSubscription(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2636">		return null;</span>
+	}
+
+	@Override
+	public UserList createUserListSubscription(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2642">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserList(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2648">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserList(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2654">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserList(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2660">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMember(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2666">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMember(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2672">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMember(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2678">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMember(String arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2684">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMembers(long arg0, String[] arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2690">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMembers(long arg0, long[] arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2696">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListMembers(String arg0, String arg1, String[] arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2702">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListSubscription(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2708">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListSubscription(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2714">		return null;</span>
+	}
+
+	@Override
+	public UserList destroyUserListSubscription(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2720">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2726">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, int arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2732">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2738">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(String arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2744">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, int arg1, long arg2, boolean arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2751">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, String arg1, int arg2, long arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2758">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(String arg0, String arg1, int arg2, long arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2765">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(long arg0, String arg1, int arg2, long arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2772">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListMembers(String arg0, String arg1, int arg2, long arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2779">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2785">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(int arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2791">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2797">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2803">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(long arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2810">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(String arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2817">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(String arg0, long arg1, boolean arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2824">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(long arg0, long arg1, boolean arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2831">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(String arg0, int arg1, long arg2, boolean arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2838">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListMemberships(long arg0, int arg1, long arg2, boolean arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2845">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserListStatuses(long arg0, Paging arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2851">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserListStatuses(long arg0, String arg1, Paging arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2857">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Status&gt; getUserListStatuses(String arg0, String arg1, Paging arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2863">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2869">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, int arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2875">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2881">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(String arg0, String arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2888">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, int arg1, long arg2, boolean arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2895">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, String arg1, int arg2, long arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2902">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(String arg0, String arg1, int arg2, long arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2909">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(long arg0, String arg1, int arg2, long arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2916">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;User&gt; getUserListSubscribers(String arg0, String arg1, int arg2, long arg3, boolean arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2923">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListSubscriptions(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2929">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListSubscriptions(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2935">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListSubscriptions(String arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2942">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListSubscriptions(long arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2949">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;UserList&gt; getUserLists(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2955">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;UserList&gt; getUserLists(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2961">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;UserList&gt; getUserLists(String arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2967">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;UserList&gt; getUserLists(long arg0, boolean arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2973">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListsOwnerships(String arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2979">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListsOwnerships(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2985">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListsOwnerships(String arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2992">		return null;</span>
+	}
+
+	@Override
+	public PagableResponseList&lt;UserList&gt; getUserListsOwnerships(long arg0, int arg1, long arg2)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L2999">		return null;</span>
+	}
+
+	@Override
+	public UserList showUserList(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3005">		return null;</span>
+	}
+
+	@Override
+	public UserList showUserList(long arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3011">		return null;</span>
+	}
+
+	@Override
+	public UserList showUserList(String arg0, String arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3017">		return null;</span>
+	}
+
+	@Override
+	public User showUserListMembership(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3023">		return null;</span>
+	}
+
+	@Override
+	public User showUserListMembership(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3029">		return null;</span>
+	}
+
+	@Override
+	public User showUserListMembership(String arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3035">		return null;</span>
+	}
+
+	@Override
+	public User showUserListSubscription(long arg0, long arg1) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3041">		return null;</span>
+	}
+
+	@Override
+	public User showUserListSubscription(long arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3047">		return null;</span>
+	}
+
+	@Override
+	public User showUserListSubscription(String arg0, String arg1, long arg2) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3053">		return null;</span>
+	}
+
+	@Override
+	public UserList updateUserList(long arg0, String arg1, boolean arg2, String arg3) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3059">		return null;</span>
+	}
+
+	@Override
+	public UserList updateUserList(long arg0, String arg1, String arg2, boolean arg3, String arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3066">		return null;</span>
+	}
+
+	@Override
+	public UserList updateUserList(String arg0, String arg1, String arg2, boolean arg3, String arg4)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3073">		return null;</span>
+	}
+
+	@Override
+	public SavedSearch createSavedSearch(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3079">		return null;</span>
+	}
+
+	@Override
+	public SavedSearch destroySavedSearch(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3085">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;SavedSearch&gt; getSavedSearches() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3091">		return null;</span>
+	}
+
+	@Override
+	public SavedSearch showSavedSearch(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3097">		return null;</span>
+	}
+
+	@Override
+	public Place getGeoDetails(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3103">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Place&gt; getSimilarPlaces(GeoLocation arg0, String arg1, String arg2, String arg3)
+			throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3110">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Place&gt; reverseGeoCode(GeoQuery arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3116">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Place&gt; searchPlaces(GeoQuery arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3122">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Location&gt; getAvailableTrends() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3128">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Location&gt; getClosestTrends(GeoLocation arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3134">		return null;</span>
+	}
+
+	@Override
+	public Trends getPlaceTrends(int arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3140">		return null;</span>
+	}
+
+	@Override
+	public User reportSpam(long arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3146">		return null;</span>
+	}
+
+	@Override
+	public User reportSpam(String arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3152">		return null;</span>
+	}
+
+	@Override
+	public TwitterAPIConfiguration getAPIConfiguration() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3158">		return null;</span>
+	}
+
+	@Override
+	public ResponseList&lt;Language&gt; getLanguages() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3164">		return null;</span>
+	}
+
+	@Override
+	public String getPrivacyPolicy() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3170">		return null;</span>
+	}
+
+	@Override
+	public Map&lt;String, RateLimitStatus&gt; getRateLimitStatus() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3176">		return null;</span>
+	}
+
+	@Override
+	public Map&lt;String, RateLimitStatus&gt; getRateLimitStatus(String... arg0) throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3182">		return null;</span>
+	}
+
+	@Override
+	public String getTermsOfService() throws TwitterException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3188">		return null;</span>
+	}
+
+	@Override
+	public DirectMessagesResources directMessages() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3194">		return null;</span>
+	}
+
+	@Override
+	public FavoritesResources favorites() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3200">		return null;</span>
+	}
+
+	@Override
+	public FriendsFollowersResources friendsFollowers() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3206">		return null;</span>
+	}
+
+	@Override
+	public HelpResources help() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3212">		return null;</span>
+	}
+
+	@Override
+	public ListsResources list() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3218">		return null;</span>
+	}
+
+	@Override
+	public PlacesGeoResources placesGeo() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3224">		return null;</span>
+	}
+
+	@Override
+	public SavedSearchesResources savedSearches() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3230">		return null;</span>
+	}
+
+	@Override
+	public SearchResource search() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3236">		return null;</span>
+	}
+
+	@Override
+	public SpamReportingResource spamReporting() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3242">		return null;</span>
+	}
+
+	@Override
+	public SuggestedUsersResources suggestedUsers() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3248">		return null;</span>
+	}
+
+	@Override
+	public TimelinesResources timelines() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3254">		return null;</span>
+	}
+
+	@Override
+	public TrendsResources trends() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3260">		return null;</span>
+	}
+
+	@Override
+	public TweetsResources tweets() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3266">		return null;</span>
+	}
+
+	@Override
+	public UsersResources users() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L3272">		return null;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

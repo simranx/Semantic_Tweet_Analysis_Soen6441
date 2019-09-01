@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TweetDistictWordImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">implementations</a> &gt; <span class="el_source">TweetDistictWordImpl.java</span></div><h1>TweetDistictWordImpl.java</h1><pre class="source lang-java linenums">package implementations;
+
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.summarizingInt;
+import static java.util.stream.Collectors.toMap;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import akka.stream.impl.fusing.Collect;
+import interfaces.TweetDistictWord;
+import play.libs.Json;
+import services.TwitterService;
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import java.util.*;
+
+<span class="nc" id="L28">public class TweetDistictWordImpl implements TweetDistictWord{</span>
+
+	@Override
+	public ArrayNode getTweetDistinctWordCount(String searchKey, int count) {
+<span class="nc" id="L32">		Twitter twitter = TwitterService.getTwitterInstance(TwitterService.getTwitterFactoryInstance());</span>
+<span class="nc" id="L33">		Query query = new Query(searchKey);</span>
+<span class="nc" id="L34">		query.count(count);</span>
+<span class="nc" id="L35">		List&lt;Status&gt; tweetsStatus = new ArrayList&lt;Status&gt;();</span>
+		try {
+<span class="nc" id="L37">			QueryResult queryResult = twitter.search(query);</span>
+<span class="nc" id="L38">			tweetsStatus = queryResult.getTweets();</span>
+<span class="nc" id="L39">		} catch (TwitterException e) {</span>
+			// TODO Auto-generated catch block
+<span class="nc" id="L41">			e.printStackTrace();</span>
+<span class="nc" id="L42">		}</span>
+<span class="nc" id="L43">		ArrayNode distinctWordJson = Json.newArray();</span>
+		
+<span class="nc" id="L45">		Map &lt;String, Integer &gt; wordCounter =tweetsStatus.stream()</span>
+<span class="nc" id="L46">												.map(tweetS-&gt;tweetS.getText())</span>
+<span class="nc" id="L47">												.map(s-&gt;s.split(&quot; &quot;))</span>
+<span class="nc" id="L48">												.flatMap(Arrays::stream)</span>
+<span class="nc" id="L49">												.map(s-&gt;s.toLowerCase())</span>
+<span class="nc" id="L50">												.collect(toMap(w -&gt; w, w -&gt; 1, Integer::sum));</span>
+		
+<span class="nc" id="L52">		wordCounter.entrySet().stream().forEach(e-&gt;{System.out.println(e.getValue() + &quot; &quot; + e.getKey());});</span>
+       
+<span class="nc" id="L54">       wordCounter.entrySet().stream()</span>
+<span class="nc" id="L55">        	.sorted(Map.Entry.&lt;String, Integer&gt;comparingByValue().reversed()</span>
+<span class="nc" id="L56">        			.thenComparing(Map.Entry.&lt;String, Integer&gt;comparingByKey().reversed()))</span>
+<span class="nc" id="L57">        	.forEachOrdered(x-&gt;{</span>
+        		ObjectNode n = Json.newObject();
+        		n.put(&quot;word&quot;, x.getKey());
+        		n.put(&quot;count&quot;,x.getValue());
+        		distinctWordJson.add(n);
+        	});
+<span class="nc" id="L63">		return distinctWordJson;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

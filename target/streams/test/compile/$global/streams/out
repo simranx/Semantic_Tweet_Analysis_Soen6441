@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/test/EmotionsCountImplTest.java:29:1: non-static variable tweetStatus cannot be referenced from a static context[0m
+[0m[[0m[31merror[0m] [0m[0m		tweetStatus = new ArrayList<Status>();[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/test/EmotionsCountImplTest.java:666:1: non-static variable tweetStatus cannot be referenced from a static context[0m
+[0m[[0m[31merror[0m] [0m[0m		tweetStatus.add(sadEmoji);[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/test/EmotionsCountImplTest.java:667:1: non-static variable tweetStatus cannot be referenced from a static context[0m
+[0m[[0m[31merror[0m] [0m[0m		tweetStatus.add(happyEmoji);[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bunny/APP-PROJECT/Assignment1/test/EmotionsCountImplTest.java:668:1: non-static variable tweetStatus cannot be referenced from a static context[0m
+[0m[[0m[31merror[0m] [0m[0m		tweetStatus.add(noEmoji);[0m

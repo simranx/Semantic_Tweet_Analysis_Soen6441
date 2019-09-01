@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>homePage.template.scala</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">views.html</a> &gt; <span class="el_source">homePage.template.scala</span></div><h1>homePage.template.scala</h1><pre class="source lang-java linenums">
+package views.html
+
+import _root_.play.twirl.api.TwirlFeatureImports._
+import _root_.play.twirl.api.TwirlHelperImports._
+import _root_.play.twirl.api.Html
+import _root_.play.twirl.api.JavaScript
+import _root_.play.twirl.api.Txt
+import _root_.play.twirl.api.Xml
+import models._
+import controllers._
+import play.api.i18n._
+import views.html._
+import play.api.templates.PlayMagic._
+import java.lang._
+import java.util._
+import scala.collection.JavaConverters._
+import play.core.j.PlayMagicForJava._
+import play.mvc._
+import play.api.data.Field
+import play.mvc.Http.Context.Implicit._
+import play.data._
+import play.core.j.PlayFormsMagicForJava._
+
+<span class="nc" id="L25">object homePage extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {</span>
+
+  /**/
+  def apply():play.twirl.api.HtmlFormat.Appendable = {
+<span class="nc" id="L29">    _display_ {</span>
+      {
+
+
+<span class="nc" id="L33">Seq[Any](format.raw/*1.1*/(&quot;&quot;&quot;&lt;!DOCTYPE html&gt;</span>
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+ 	    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+ 	    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src *;img-src *;&quot;&gt;
+		&lt;title&gt;Tweets Application&lt;/title&gt;
+<span class="nc" id="L40">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*8.40*/routes/*8.46*/.Assets.versioned(&quot;javascripts/lib/angular.min.js&quot;)),format.raw/*8.97*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L41">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*9.40*/routes/*9.46*/.Assets.versioned(&quot;javascripts/lib/angular-ui-bootstrap-modal.js&quot;)),format.raw/*9.112*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L42">		&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&quot;&quot;),_display_(/*10.33*/routes/*10.39*/.Assets.versioned(&quot;stylesheets/bootstrap.min.css&quot;)),format.raw/*10.89*/(&quot;&quot;&quot;&quot;&gt;</span>
+<span class="nc" id="L43">		&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&quot;&quot;),_display_(/*11.33*/routes/*11.39*/.Assets.versioned(&quot;stylesheets/common-style.css&quot;)),format.raw/*11.88*/(&quot;&quot;&quot;&quot;&gt;</span>
+<span class="nc" id="L44">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*12.40*/routes/*12.46*/.Assets.versioned(&quot;javascripts/lib/jquery-3.3.1.min.js&quot;)),format.raw/*12.102*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L45">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*13.40*/routes/*13.46*/.Assets.versioned(&quot;javascripts/lib/bootstrap.min.js&quot;)),format.raw/*13.99*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L46">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*14.40*/routes/*14.46*/.Assets.versioned(&quot;javascripts/search/searchApp.js&quot;)),format.raw/*14.98*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L47">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*15.40*/routes/*15.46*/.Assets.versioned(&quot;javascripts/search/searchController.js&quot;)),format.raw/*15.105*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+<span class="nc" id="L48">		&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&quot;&quot;),_display_(/*16.40*/routes/*16.46*/.Assets.versioned(&quot;javascripts/search/searchService.js&quot;)),format.raw/*16.102*/(&quot;&quot;&quot;&quot;&gt;&lt;/script&gt;</span>
+
+	&lt;/head&gt;
+	&lt;body ng-app=&quot;searchTweets&quot; &gt;
+		&lt;div ng-controller=&quot;SearchController&quot;&gt;
+			&lt;div class=&quot;container head-not-move&quot;&gt;
+				&lt;div class=&quot;row&quot;&gt;
+					&lt;div class=&quot;col-sm-12&quot;&gt;&lt;br&gt;&lt;/br&gt;&lt;/div&gt;
+			        &lt;div class=&quot;col-sm-12&quot;&gt;
+			    		&lt;h2 class=&quot;heading-center&quot;&gt;Search Tweets&lt;/h2&gt;
+			            &lt;div id=&quot;custom-search-input&quot;&gt;
+			                &lt;div class=&quot;input-group col-sm-12&quot;&gt;
+			                    &lt;input type=&quot;text&quot; class=&quot;form-control input-lg&quot; placeholder=&quot;enter search key&quot; ng-model=&quot;searchKey&quot; /&gt;
+			                    &lt;span class=&quot;input-group-btn&quot;&gt;
+			                        &lt;button class=&quot;btn btn-info btn-lg&quot; type=&quot;button&quot; ng-click=&quot;searchTweets()&quot;&gt;
+			                        	&lt;span&gt;Search&lt;/span&gt;
+			                        &lt;/button&gt;
+			                    &lt;/span&gt;
+			                &lt;/div&gt;
+			            &lt;/div&gt;
+			        &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;container body-move&quot;&gt;
+				&lt;div ng-repeat=&quot;(key,results) in allResults&quot;&gt;
+				&lt;div class=&quot;searchHeading&quot;&gt;
+					&lt;br&gt;&lt;/br&gt;
+					&lt;caption&gt;
+<span class="nc" id="L76">						&lt;a href=&quot;#&quot; ng-click=&quot;$event.preventDefault(); openTweetWord(key)&quot;&gt;&quot;&quot;&quot;),format.raw/*44.74*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*44.75*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*44.76*/(&quot;&quot;&quot;key&quot;&quot;&quot;),format.raw/*44.79*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*44.80*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*44.81*/(&quot;&quot;&quot;&lt;/a&gt;&amp;nbsp;</span>
+						&lt;button ng-if=&quot;!results.showEmotion&quot; class=&quot;btn btn-info btn-sm&quot; ng-click=&quot;getTweetSentiment(key)&quot; title=&quot;Get Emotion&quot;&gt;Get Emotion&lt;/button&gt;
+<span class="nc" id="L78">						&lt;span &gt;&quot;&quot;&quot;),format.raw/*46.14*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*46.15*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*46.16*/(&quot;&quot;&quot;results.emotion&quot;&quot;&quot;),format.raw/*46.31*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*46.32*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*46.33*/(&quot;&quot;&quot;&lt;/span&gt;</span>
+					&lt;/caption&gt;
+				&lt;/div&gt;
+				&lt;table class=&quot;table table-stripped table-color&quot;&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th column=&quot;sr-column&quot;&gt;S.No.&lt;/th&gt;
+							&lt;th column=&quot;name-column&quot;&gt;Name&lt;/th&gt;
+							&lt;th column=&quot;location-column&quot;&gt;Location&lt;/th&gt;
+							&lt;th column=&quot;tweets-column&quot;&gt;Tweet&lt;/th&gt;
+							&lt;th column=&quot;hashtags-column&quot;&gt;Hash Tags&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr ng-repeat = &quot;result in results.result&quot;&gt;
+<span class="nc" id="L93">							&lt;td&gt;&quot;&quot;&quot;),format.raw/*61.12*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*61.13*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*61.14*/(&quot;&quot;&quot;$index+1&quot;&quot;&quot;),format.raw/*61.22*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*61.23*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*61.24*/(&quot;&quot;&quot;&lt;/td&gt;</span>
+<span class="nc" id="L94">							&lt;td&gt;&lt;a href=&quot;#&quot; ng-click=&quot;$event.preventDefault(); openProfile(result.displayName)&quot;&gt;&quot;&quot;&quot;),format.raw/*62.92*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*62.93*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*62.94*/(&quot;&quot;&quot;result.name&quot;&quot;&quot;),format.raw/*62.105*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*62.106*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*62.107*/(&quot;&quot;&quot;&lt;/a&gt;&lt;/td&gt;</span>
+							&lt;td&gt;
+								&lt;div ng-if=&quot;result.showLocationLink&quot;&gt;
+<span class="nc" id="L97">									&lt;a href=&quot;#&quot; ng-click=&quot;$event.preventDefault(); openLocation(result.latitude,result.longitude,location)&quot;&gt;&quot;&quot;&quot;),format.raw/*65.114*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*65.115*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*65.116*/(&quot;&quot;&quot;result.location&quot;&quot;&quot;),format.raw/*65.131*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*65.132*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*65.133*/(&quot;&quot;&quot;&lt;/a&gt;</span>
+								&lt;/div&gt;
+								&lt;div ng-if=&quot;!result.showLocationLink&quot;&gt;
+<span class="nc" id="L100">									&lt;a class=&quot;linkDisabled&quot; href=&quot;#&quot; ng-click=&quot;$event.preventDefault(); openLocation(result.latitude,result.longitude,location)&quot;&gt;&quot;&quot;&quot;),format.raw/*68.135*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*68.136*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*68.137*/(&quot;&quot;&quot;result.location&quot;&quot;&quot;),format.raw/*68.152*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*68.153*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*68.154*/(&quot;&quot;&quot;&lt;/a&gt;</span>
+								&lt;/div&gt;
+							&lt;/td&gt;
+<span class="nc" id="L103">							&lt;td&gt;&quot;&quot;&quot;),format.raw/*71.12*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*71.13*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*71.14*/(&quot;&quot;&quot;result.tweet&quot;&quot;&quot;),format.raw/*71.26*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*71.27*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*71.28*/(&quot;&quot;&quot;&lt;/td&gt;</span>
+							&lt;td&gt;
+<span class="nc" id="L105">								&lt;span ng-repeat=&quot;hashT in result.splitHashTags&quot;&gt;&lt;a href=&quot;#&quot; ng-click=&quot;$event.preventDefault(); openHashTag(hashT)&quot;&gt;&quot;&quot;&quot;),format.raw/*73.124*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*73.125*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*73.126*/(&quot;&quot;&quot;hashT&quot;&quot;&quot;),format.raw/*73.131*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*73.132*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*73.133*/(&quot;&quot;&quot;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span>
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			 &lt;div class=&quot;modal-color&quot; modal=&quot;showUserProfileModal&quot; close=&quot;cancel(&quot;USER_PROFILE&quot;)&quot;&gt;
+			      &lt;div class=&quot;modal-header&quot;&gt;
+<span class="nc" id="L115">			          &lt;h4&gt;Profile For &quot;&quot;&quot;),format.raw/*83.30*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*83.31*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*83.32*/(&quot;&quot;&quot;userProfileQueryParam&quot;&quot;&quot;),format.raw/*83.53*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*83.54*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*83.55*/(&quot;&quot;&quot;&lt;/h4&gt;</span>
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-body&quot;&gt;
+			          &lt;div class=&quot;user-profile&quot;&gt;
+<span class="nc" id="L119">			          	&lt;p&gt; Name: &quot;&quot;&quot;),format.raw/*87.25*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*87.26*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*87.27*/(&quot;&quot;&quot;userProfileQueryResult.userName&quot;&quot;&quot;),format.raw/*87.58*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*87.59*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*87.60*/(&quot;&quot;&quot;&lt;/p&gt;&lt;br&gt;</span>
+<span class="nc" id="L120">			          	&lt;img id=&quot;imgID&quot; class=&quot;img-center&quot; ng-src=&quot;&quot;&quot;&quot;),format.raw/*88.58*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*88.59*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*88.60*/(&quot;&quot;&quot;userProfileQueryResult.userImageURL&quot;&quot;&quot;),format.raw/*88.95*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*88.96*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*88.97*/(&quot;&quot;&quot;&quot;&gt;</span>
+<span class="nc" id="L121">			          	&lt;p&gt; Display Name: &quot;&quot;&quot;),format.raw/*89.33*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*89.34*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*89.35*/(&quot;&quot;&quot;userProfileQueryResult.userScreenName&quot;&quot;&quot;),format.raw/*89.72*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*89.73*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*89.74*/(&quot;&quot;&quot;&lt;p&gt;&lt;br&gt;</span>
+<span class="nc" id="L122">			          	&lt;p&gt; Location: &quot;&quot;&quot;),format.raw/*90.29*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*90.30*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*90.31*/(&quot;&quot;&quot;userProfileQueryResult.userLocation&quot;&quot;&quot;),format.raw/*90.66*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*90.67*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*90.68*/(&quot;&quot;&quot;&lt;p&gt;&lt;br&gt;</span>
+<span class="nc" id="L123">			          	&lt;p&gt; Description: &quot;&quot;&quot;),format.raw/*91.32*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*91.33*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*91.34*/(&quot;&quot;&quot;userProfileQueryResult.userDescription&quot;&quot;&quot;),format.raw/*91.72*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*91.73*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*91.74*/(&quot;&quot;&quot;&lt;p&gt;&lt;br&gt;</span>
+<span class="nc" id="L124">			          	&lt;p&gt; Follower Count: &quot;&quot;&quot;),format.raw/*92.35*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*92.36*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*92.37*/(&quot;&quot;&quot;userProfileQueryResult.userFollowerCount&quot;&quot;&quot;),format.raw/*92.77*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*92.78*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*92.79*/(&quot;&quot;&quot;&lt;p&gt;&lt;br&gt;</span>
+<span class="nc" id="L125">			          	&lt;p&gt; Profile URL: &quot;&quot;&quot;),format.raw/*93.32*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*93.33*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*93.34*/(&quot;&quot;&quot;userProfileQueryResult.userProfileURL&quot;&quot;&quot;),format.raw/*93.71*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*93.72*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*93.73*/(&quot;&quot;&quot;&lt;p&gt;&lt;br&gt;</span>
+			          	&lt;div ng-repeat=&quot;tweetTimeLine in userProfileQueryResult.splitTimelineTweets&quot;&gt;
+<span class="nc" id="L127">			          		&lt;p&gt;&quot;&quot;&quot;),format.raw/*95.19*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*95.20*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*95.21*/(&quot;&quot;&quot;tweetTimeLine&quot;&quot;&quot;),format.raw/*95.34*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*95.35*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*95.36*/(&quot;&quot;&quot;&lt;/p&gt;</span>
+			          	&lt;/div&gt;
+			          &lt;/div&gt;
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-footer&quot;&gt;
+			        &lt;button class=&quot;btn&quot; ng-click=&quot;close(userProfileConstant)&quot;&gt;Cancel&lt;/button&gt;
+			      &lt;/div&gt;
+		    &lt;/div&gt;
+		    
+		    &lt;div class=&quot;modal-color&quot; modal=&quot;showLocationModal&quot; close=&quot;cancel(&quot;LOCATION&quot;)&quot;&gt;
+			      &lt;div class=&quot;modal-header&quot;&gt;
+<span class="nc" id="L138">			          &lt;h4&gt;Top 10 Tweets For Location&quot;&quot;&quot;),format.raw/*106.44*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*106.45*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*106.46*/(&quot;&quot;&quot;locationQueryParam.location&quot;&quot;&quot;),format.raw/*106.73*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*106.74*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*106.75*/(&quot;&quot;&quot;&lt;/h4&gt;</span>
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-body&quot;&gt;
+			          &lt;div ng-repeat=&quot;result in locationQueryResult&quot;&gt;
+<span class="nc" id="L142">			          	&lt;p&gt;&quot;&quot;&quot;),format.raw/*110.18*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*110.19*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*110.20*/(&quot;&quot;&quot;$index+1&quot;&quot;&quot;),format.raw/*110.28*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*110.29*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*110.30*/(&quot;&quot;&quot;. &quot;&quot;&quot;),format.raw/*110.32*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*110.33*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*110.34*/(&quot;&quot;&quot;result.tweet&quot;&quot;&quot;),format.raw/*110.46*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*110.47*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*110.48*/(&quot;&quot;&quot;&lt;/p&gt;</span>
+			          &lt;/div&gt;
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-footer&quot;&gt;
+			        &lt;button class=&quot;btn&quot; ng-click=&quot;close(locationConstant)&quot;&gt;Cancel&lt;/button&gt;
+			      &lt;/div&gt;
+		    &lt;/div&gt;
+		    
+		    &lt;div class=&quot;modal-color&quot; modal=&quot;showTweetWordModal&quot; close=&quot;close(TWEET_WORD)&quot;&gt;
+			      &lt;div class=&quot;modal-header&quot;&gt;
+<span class="nc" id="L152">			          &lt;h4&gt;Distict Word Count For &quot;&quot;&quot;),format.raw/*120.41*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*120.42*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*120.43*/(&quot;&quot;&quot;tweetWordQueryParam&quot;&quot;&quot;),format.raw/*120.62*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*120.63*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*120.64*/(&quot;&quot;&quot;&lt;/h4&gt;</span>
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-body&quot;&gt;
+			      	&lt;table class=&quot;table table-stripped table-color&quot;&gt;
+						&lt;thead&gt;
+							&lt;tr&gt;
+								&lt;th column=&quot;word-column&quot;&gt;Word&lt;/th&gt;
+								&lt;th column=&quot;word-column&quot;&gt;Count&lt;/th&gt;
+							&lt;/tr&gt;
+						&lt;/thead&gt;
+						&lt;tbody&gt;
+							&lt;tr ng-repeat = &quot;result in tweetWordQueryResult&quot;&gt;
+<span class="nc" id="L164">								&lt;td&gt;&quot;&quot;&quot;),format.raw/*132.13*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*132.14*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*132.15*/(&quot;&quot;&quot;result.word&quot;&quot;&quot;),format.raw/*132.26*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*132.27*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*132.28*/(&quot;&quot;&quot;&lt;/td&gt;</span>
+<span class="nc" id="L165">								&lt;td&gt;&quot;&quot;&quot;),format.raw/*133.13*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*133.14*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*133.15*/(&quot;&quot;&quot;result.count&quot;&quot;&quot;),format.raw/*133.27*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*133.28*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*133.29*/(&quot;&quot;&quot;&lt;/td&gt;</span>
+							&lt;/tr&gt;
+					&lt;/table&gt;
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-footer&quot;&gt;
+			        &lt;button class=&quot;btn&quot; ng-click=&quot;close(tweetWordConstant)&quot;&gt;Cancel&lt;/button&gt;
+			      &lt;/div&gt;
+		    &lt;/div&gt;
+		    
+		    &lt;div class=&quot;modal-color&quot; modal=&quot;showHashTagModal&quot; close=&quot;cancel(&quot;HASH_TAG&quot;)&quot;&gt;
+			      &lt;div class=&quot;modal-header&quot;&gt;
+<span class="nc" id="L176">			          &lt;h4&gt;Top 10 Tweet For #&quot;&quot;&quot;),format.raw/*144.36*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*144.37*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*144.38*/(&quot;&quot;&quot;hashTagQueryParam&quot;&quot;&quot;),format.raw/*144.55*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*144.56*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*144.57*/(&quot;&quot;&quot;&lt;/h4&gt;</span>
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-body&quot;&gt;
+			          &lt;div ng-repeat=&quot;result in hashTagQueryResult&quot;&gt;
+<span class="nc" id="L180">			          	&lt;p&gt;&quot;&quot;&quot;),format.raw/*148.18*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*148.19*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*148.20*/(&quot;&quot;&quot;$index+1&quot;&quot;&quot;),format.raw/*148.28*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*148.29*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*148.30*/(&quot;&quot;&quot;. &quot;&quot;&quot;),format.raw/*148.32*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*148.33*/(&quot;&quot;&quot;{&quot;&quot;&quot;),format.raw/*148.34*/(&quot;&quot;&quot;result.tweet&quot;&quot;&quot;),format.raw/*148.46*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*148.47*/(&quot;&quot;&quot;}&quot;&quot;&quot;),format.raw/*148.48*/(&quot;&quot;&quot;&lt;/p&gt;</span>
+			          &lt;/div&gt;
+			      &lt;/div&gt;
+			      &lt;div class=&quot;modal-footer&quot;&gt;
+			        &lt;button class=&quot;btn&quot; ng-click=&quot;close(hashTagConstant)&quot;&gt;Cancel&lt;/button&gt;
+			      &lt;/div&gt;
+		    &lt;/div&gt;
+    
+		&lt;/div&gt;
+	&lt;/body&gt;	
+&lt;/html&gt;&quot;&quot;&quot;))
+      }
+    }
+  }
+
+<span class="nc" id="L195">  def render(): play.twirl.api.HtmlFormat.Appendable = apply()</span>
+
+<span class="nc" id="L197">  def f:(() =&gt; play.twirl.api.HtmlFormat.Appendable) = () =&gt; apply()</span>
+
+<span class="nc" id="L199">  def ref: this.type = this</span>
+
+}
+
+
+              /*
+                  -- GENERATED --
+                  DATE: Mon Jul 30 21:11:07 EDT 2018
+                  SOURCE: /home/bunny/APP-PROJECT/Assignment1/app/views/homePage.scala.html
+                  HASH: 6abbe59bbd9cbca1cff0a7d3d83f60f6c95b3ecd
+                  MATRIX: 1033-&gt;0|1350-&gt;291|1364-&gt;297|1435-&gt;348|1512-&gt;399|1526-&gt;405|1613-&gt;471|1684-&gt;515|1699-&gt;521|1770-&gt;571|1832-&gt;606|1847-&gt;612|1917-&gt;661|1986-&gt;703|2001-&gt;709|2079-&gt;765|2157-&gt;816|2172-&gt;822|2246-&gt;875|2324-&gt;926|2339-&gt;932|2412-&gt;984|2490-&gt;1035|2505-&gt;1041|2586-&gt;1100|2664-&gt;1151|2679-&gt;1157|2757-&gt;1213|3887-&gt;2315|3916-&gt;2316|3945-&gt;2317|3976-&gt;2320|4005-&gt;2321|4034-&gt;2322|4232-&gt;2492|4261-&gt;2493|4290-&gt;2494|4333-&gt;2509|4362-&gt;2510|4391-&gt;2511|4860-&gt;2952|4889-&gt;2953|4918-&gt;2954|4954-&gt;2962|4983-&gt;2963|5012-&gt;2964|5137-&gt;3061|5166-&gt;3062|5195-&gt;3063|5235-&gt;3074|5265-&gt;3075|5295-&gt;3076|5505-&gt;3257|5535-&gt;3258|5565-&gt;3259|5609-&gt;3274|5639-&gt;3275|5669-&gt;3276|5899-&gt;3477|5929-&gt;3478|5959-&gt;3479|6003-&gt;3494|6033-&gt;3495|6063-&gt;3496|6135-&gt;3540|6164-&gt;3541|6193-&gt;3542|6233-&gt;3554|6262-&gt;3555|6291-&gt;3556|6461-&gt;3697|6491-&gt;3698|6521-&gt;3699|6555-&gt;3704|6585-&gt;3705|6615-&gt;3706|6905-&gt;3968|6934-&gt;3969|6963-&gt;3970|7012-&gt;3991|7041-&gt;3992|7070-&gt;3993|7218-&gt;4113|7247-&gt;4114|7276-&gt;4115|7335-&gt;4146|7364-&gt;4147|7393-&gt;4148|7487-&gt;4214|7516-&gt;4215|7545-&gt;4216|7608-&gt;4251|7637-&gt;4252|7666-&gt;4253|7729-&gt;4288|7758-&gt;4289|7787-&gt;4290|7852-&gt;4327|7881-&gt;4328|7910-&gt;4329|7974-&gt;4365|8003-&gt;4366|8032-&gt;4367|8095-&gt;4402|8124-&gt;4403|8153-&gt;4404|8220-&gt;4443|8249-&gt;4444|8278-&gt;4445|8344-&gt;4483|8373-&gt;4484|8402-&gt;4485|8472-&gt;4527|8501-&gt;4528|8530-&gt;4529|8598-&gt;4569|8627-&gt;4570|8656-&gt;4571|8723-&gt;4610|8752-&gt;4611|8781-&gt;4612|8846-&gt;4649|8875-&gt;4650|8904-&gt;4651|9050-&gt;4769|9079-&gt;4770|9108-&gt;4771|9149-&gt;4784|9178-&gt;4785|9207-&gt;4786|9619-&gt;5169|9649-&gt;5170|9679-&gt;5171|9735-&gt;5198|9765-&gt;5199|9795-&gt;5200|9958-&gt;5334|9988-&gt;5335|10018-&gt;5336|10055-&gt;5344|10085-&gt;5345|10115-&gt;5346|10146-&gt;5348|10176-&gt;5349|10206-&gt;5350|10247-&gt;5362|10277-&gt;5363|10307-&gt;5364|10692-&gt;5720|10722-&gt;5721|10752-&gt;5722|10800-&gt;5741|10830-&gt;5742|10860-&gt;5743|11228-&gt;6082|11258-&gt;6083|11288-&gt;6084|11328-&gt;6095|11358-&gt;6096|11388-&gt;6097|11435-&gt;6115|11465-&gt;6116|11495-&gt;6117|11536-&gt;6129|11566-&gt;6130|11596-&gt;6131|11984-&gt;6490|12014-&gt;6491|12044-&gt;6492|12090-&gt;6509|12120-&gt;6510|12150-&gt;6511|12312-&gt;6644|12342-&gt;6645|12372-&gt;6646|12409-&gt;6654|12439-&gt;6655|12469-&gt;6656|12500-&gt;6658|12530-&gt;6659|12560-&gt;6660|12601-&gt;6672|12631-&gt;6673|12661-&gt;6674
+                  LINES: 33-&gt;1|40-&gt;8|40-&gt;8|40-&gt;8|41-&gt;9|41-&gt;9|41-&gt;9|42-&gt;10|42-&gt;10|42-&gt;10|43-&gt;11|43-&gt;11|43-&gt;11|44-&gt;12|44-&gt;12|44-&gt;12|45-&gt;13|45-&gt;13|45-&gt;13|46-&gt;14|46-&gt;14|46-&gt;14|47-&gt;15|47-&gt;15|47-&gt;15|48-&gt;16|48-&gt;16|48-&gt;16|76-&gt;44|76-&gt;44|76-&gt;44|76-&gt;44|76-&gt;44|76-&gt;44|78-&gt;46|78-&gt;46|78-&gt;46|78-&gt;46|78-&gt;46|78-&gt;46|93-&gt;61|93-&gt;61|93-&gt;61|93-&gt;61|93-&gt;61|93-&gt;61|94-&gt;62|94-&gt;62|94-&gt;62|94-&gt;62|94-&gt;62|94-&gt;62|97-&gt;65|97-&gt;65|97-&gt;65|97-&gt;65|97-&gt;65|97-&gt;65|100-&gt;68|100-&gt;68|100-&gt;68|100-&gt;68|100-&gt;68|100-&gt;68|103-&gt;71|103-&gt;71|103-&gt;71|103-&gt;71|103-&gt;71|103-&gt;71|105-&gt;73|105-&gt;73|105-&gt;73|105-&gt;73|105-&gt;73|105-&gt;73|115-&gt;83|115-&gt;83|115-&gt;83|115-&gt;83|115-&gt;83|115-&gt;83|119-&gt;87|119-&gt;87|119-&gt;87|119-&gt;87|119-&gt;87|119-&gt;87|120-&gt;88|120-&gt;88|120-&gt;88|120-&gt;88|120-&gt;88|120-&gt;88|121-&gt;89|121-&gt;89|121-&gt;89|121-&gt;89|121-&gt;89|121-&gt;89|122-&gt;90|122-&gt;90|122-&gt;90|122-&gt;90|122-&gt;90|122-&gt;90|123-&gt;91|123-&gt;91|123-&gt;91|123-&gt;91|123-&gt;91|123-&gt;91|124-&gt;92|124-&gt;92|124-&gt;92|124-&gt;92|124-&gt;92|124-&gt;92|125-&gt;93|125-&gt;93|125-&gt;93|125-&gt;93|125-&gt;93|125-&gt;93|127-&gt;95|127-&gt;95|127-&gt;95|127-&gt;95|127-&gt;95|127-&gt;95|138-&gt;106|138-&gt;106|138-&gt;106|138-&gt;106|138-&gt;106|138-&gt;106|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|142-&gt;110|152-&gt;120|152-&gt;120|152-&gt;120|152-&gt;120|152-&gt;120|152-&gt;120|164-&gt;132|164-&gt;132|164-&gt;132|164-&gt;132|164-&gt;132|164-&gt;132|165-&gt;133|165-&gt;133|165-&gt;133|165-&gt;133|165-&gt;133|165-&gt;133|176-&gt;144|176-&gt;144|176-&gt;144|176-&gt;144|176-&gt;144|176-&gt;144|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148|180-&gt;148
+                  -- GENERATED --
+              */
+          
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,37 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector(-Djacoco-agent.destfile=/home/bunny/APP-PROJECT/Assignment1/target/scala-2.12/jacoco/data/jacoco.exec)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 4 initial tasks for 4 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(EmotionsCountImplTest, sbt.ForkMain$AnnotatedFingerscan@39d828ee, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mEmotionsCountImplTest[0m.[36mtestSadSmile[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mEmotionsCountImplTest[0m.[36mtestSadSmile[0m finished, took 0.035 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mEmotionsCountImplTest[0m.[36mtestHappySmile[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mEmotionsCountImplTest[0m.[36mtestHappySmile[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.046s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(implementations.TweetEmotionImplTestHappy, sbt.ForkMain$AnnotatedFingerscan@71d6b8e7, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest implementations.[33mTweetEmotionImplTestHappy[0m.[36mgetTweetEmotion[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest implementations.[33mTweetEmotionImplTestHappy[0m.[36mgetTweetEmotion[0m finished, took 0.402 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.422s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(LocationImplTest, sbt.ForkMain$AnnotatedFingerscan@982e97c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mLocationImplTest[0m.[36mtest[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mLocationImplTest[0m.[36mtest[0m finished, took 0.184 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.185s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(implementations.TweetEmotionImplTestNeutral, sbt.ForkMain$AnnotatedFingerscan@b44c7f5, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest implementations.[33mTweetEmotionImplTestNeutral[0m.[36mgetTweetEmotion[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest implementations.[33mTweetEmotionImplTestNeutral[0m.[36mgetTweetEmotion[0m finished, took 0.006 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.006s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 5, Failed 0, Errors 0, Passed 5[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	implementations.TweetEmotionImplTestHappy[0m
+[0m[[0m[0mdebug[0m] [0m[0m	implementations.TweetEmotionImplTestNeutral[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmotionsCountImplTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LocationImplTest[0m

@@ -1,0 +1,12 @@
+[0m[[0m[0minfo[0m] [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m------- Jacoco Coverage Report -------[0m
+[0m[[0m[0minfo[0m] [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mLines: 5.57% (>= required 0.0%) covered, 1830 of 1938 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0mInstructions: 5.66% (>= required 0.0%) covered, 7164 of 7594 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0mBranches: 7.14% (>= required 0.0%) covered, 104 of 112 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0mMethods: 2.43% (>= required 0.0%) covered, 1566 of 1605 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0mComplexity: 2.47% (>= required 0.0%) covered, 1620 of 1661 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0mClass: 26.67% (>= required 0.0%) covered, 44 of 60 missed, OK[0m
+[0m[[0m[0minfo[0m] [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mCheck /home/bunny/APP-PROJECT/Assignment1/target/scala-2.12/jacoco/report for detailed report[0m
+[0m[[0m[0minfo[0m] [0m[0m [0m
